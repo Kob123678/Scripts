@@ -81,11 +81,12 @@ local Credit = Tab:NewSection("Credits!!")
 
 Credit:NewLabel("UI Library: Kavo")
 Credit:NewLabel("Script By Kob")
+Credit:NewLabel("Some idea is from Moonlight Client Script Hub")
 
 -- Hotel Elephant
 
 local Tab = Window:NewTab("Hotel Elephant")
-local Hotel = Tab:NewSection("Ulimate money (Click to execute)")
+local Hotel = Tab:NewSection("Hotel Elephant (Click to execute)")
 
 
 Hotel:NewButton("Get Ulimate money", "Click to execute", function()
