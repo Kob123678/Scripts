@@ -9,7 +9,7 @@ local Tab = Window:NewTab("MAIN MENU")
 
 local Toggle = Tab:NewSection("Toggle UI")
 
-Toggle:NewKeybind("Toggle UI", "Click to change keybinds", Enum.KeyCode.Delete, function()
+Toggle:NewKeybind("Toggle UI", "Click to change keybinds", Enum.KeyCode.F, function()
 	Library:ToggleUI()
 end)
 
