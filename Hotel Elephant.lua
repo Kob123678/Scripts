@@ -88,7 +88,7 @@ Credit:NewLabel("Some function is from Moonlight Client Script Hub")
 local Tab = Window:NewTab("Hotel Elephant")
 local Hotel = Tab:NewSection("Hotel Elephant (Click to execute)")
 
-Hotel:NewTextBox("Set everyone's cash", "set everybody's money", function(txt)
+Hotel:NewTextBox("Set everyone's cash", "Patched", function(txt)
 	local SetMoney = (txt)
 	
 		local plyrs = game:GetService("Players")
