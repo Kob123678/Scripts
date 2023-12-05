@@ -151,7 +151,7 @@ AdminScript.Text = "Inf Yield"
 AdminScript.TextColor3 = Color3.fromRGB(255, 255, 255)
 AdminScript.TextSize = 14.000
 AdminScript.MouseButton1Click:Connect(function()
-	print(123)
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
 UICorner_8.Parent = AdminScript
@@ -181,6 +181,9 @@ Brookhaven.Font = Enum.Font.SourceSans
 Brookhaven.Text = "Brookhaven"
 Brookhaven.TextColor3 = Color3.fromRGB(255, 255, 255)
 Brookhaven.TextSize = 14.000
+Brookhaven.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+end)
 
 UICorner_10.Parent = Brookhaven
 
@@ -195,6 +198,9 @@ BladeBall.Font = Enum.Font.SourceSans
 BladeBall.Text = "Blade Ball"
 BladeBall.TextColor3 = Color3.fromRGB(255, 255, 255)
 BladeBall.TextSize = 14.000
+BladeBall.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/nqxlOfc/Loaders/main/Blade_Ball.lua'))()
+end)
 
 UICorner_11.Parent = BladeBall
 
@@ -209,6 +215,9 @@ PetSim99.Font = Enum.Font.SourceSans
 PetSim99.Text = "Pet Simulator 99"
 PetSim99.TextColor3 = Color3.fromRGB(255, 255, 255)
 PetSim99.TextSize = 14.000
+PetSim99.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua"))()
+end)
 
 UICorner_12.Parent = PetSim99
 
