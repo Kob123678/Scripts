@@ -12,6 +12,8 @@ local Execute = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
 local Clear = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
+local ImageButton = Instance.new("ImageButton")
+local UICorner_6 = Instance.new("UICorner")
 
 --Properties:
 
@@ -24,8 +26,9 @@ Main.Parent = Haxx
 Main.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0.0966189057, 0, 0.294228673, 0)
+Main.Position = UDim2.new(0.385538965, 0, 0.177237004, 0)
 Main.Size = UDim2.new(0, 376, 0, 211)
+Main.Visible = false
 
 UICorner.Parent = Main
 
@@ -96,9 +99,19 @@ Clear.TextSize = 14.000
 
 UICorner_5.Parent = Clear
 
+ImageButton.Parent = Haxx
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.0278751757, 0, 0.0555177666, 0)
+ImageButton.Size = UDim2.new(0, 82, 0, 82)
+ImageButton.Image = "rbxassetid://15550241838"
+
+UICorner_6.Parent = ImageButton
+
 -- Scripts:
 
-local function AZQWIS_fake_script() -- TextBox.LocalScript 
+local function ACHMGCV_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local TextBox = script.Parent -- Replace with the actual TextBox
@@ -110,8 +123,8 @@ local function AZQWIS_fake_script() -- TextBox.LocalScript
 	end)
 	
 end
-coroutine.wrap(AZQWIS_fake_script)()
-local function KNCIJV_fake_script() -- Execute.LocalScript 
+coroutine.wrap(ACHMGCV_fake_script)()
+local function BNQJMA_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -120,8 +133,8 @@ local function KNCIJV_fake_script() -- Execute.LocalScript
 		loadstring(textbox.Text)() -- Execute Script From TextBox
 	end)
 end
-coroutine.wrap(KNCIJV_fake_script)()
-local function SCZOK_fake_script() -- Clear.LocalScript 
+coroutine.wrap(BNQJMA_fake_script)()
+local function ETII_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	local button = script.Parent
@@ -130,8 +143,8 @@ local function SCZOK_fake_script() -- Clear.LocalScript
 		textbox.Text = "" -- Make Textbox Empty
 	end)
 end
-coroutine.wrap(SCZOK_fake_script)()
-local function AOKFFCX_fake_script() -- Main.LocalScript 
+coroutine.wrap(ETII_fake_script)()
+local function ECTR_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	local UIS = game:GetService('UserInputService')
@@ -169,4 +182,16 @@ local function AOKFFCX_fake_script() -- Main.LocalScript
 		end
 	end)
 end
-coroutine.wrap(AOKFFCX_fake_script)()
+coroutine.wrap(ECTR_fake_script)()
+local function VMBKJP_fake_script() -- Haxx.LocalScript 
+	local script = Instance.new('LocalScript', Haxx)
+
+	local SGui = script.Parent
+	local Frame = SGui:WaitForChild("Main")
+	local Button = SGui:WaitForChild("ImageButton")
+	
+	Button.MouseButton1Up:Connect(function()
+		Frame.Visible = not Frame.Visible
+	end)
+end
+coroutine.wrap(VMBKJP_fake_script)()
