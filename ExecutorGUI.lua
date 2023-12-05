@@ -1,6 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
 -- Instances:
 
 local Haxx = Instance.new("ScreenGui")
@@ -86,6 +83,9 @@ Destory.Font = Enum.Font.SourceSans
 Destory.Text = "DestoryScript"
 Destory.TextColor3 = Color3.fromRGB(255, 255, 255)
 Destory.TextSize = 14.000
+Destory.MouseButton1Click:Connect(function()
+	Haxx:Destroy()
+end)
 
 UICorner_3.Parent = Destory
 
@@ -254,15 +254,7 @@ UICorner_14.Parent = ImageButton
 
 -- Scripts:
 
--- Destory.Destoru is disabled.
-local function OJCLY_fake_script() -- Destory.LocalScript 
-	local script = Instance.new('LocalScript', Destory)
-
-	local destory = script.Parent.Destoru
-	destory.Enabled = true
-end
-coroutine.wrap(OJCLY_fake_script)()
-local function DBMEFFD_fake_script() -- TextBox.LocalScript 
+local function GHUCRB_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local TextBox = script.Parent -- Replace with the actual TextBox
@@ -274,8 +266,8 @@ local function DBMEFFD_fake_script() -- TextBox.LocalScript
 	end)
 	
 end
-coroutine.wrap(DBMEFFD_fake_script)()
-local function OIIMH_fake_script() -- Execute.LocalScript 
+coroutine.wrap(GHUCRB_fake_script)()
+local function PATZ_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -284,8 +276,8 @@ local function OIIMH_fake_script() -- Execute.LocalScript
 		loadstring(textbox.Text)() -- Execute Script From TextBox
 	end)
 end
-coroutine.wrap(OIIMH_fake_script)()
-local function EMRE_fake_script() -- Clear.LocalScript 
+coroutine.wrap(PATZ_fake_script)()
+local function VRLF_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	local button = script.Parent
@@ -294,8 +286,8 @@ local function EMRE_fake_script() -- Clear.LocalScript
 		textbox.Text = "" -- Make Textbox Empty
 	end)
 end
-coroutine.wrap(EMRE_fake_script)()
-local function WUDOP_fake_script() -- Main.LocalScript 
+coroutine.wrap(VRLF_fake_script)()
+local function RNMCAV_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	local UIS = game:GetService('UserInputService')
@@ -333,8 +325,8 @@ local function WUDOP_fake_script() -- Main.LocalScript
 		end
 	end)
 end
-coroutine.wrap(WUDOP_fake_script)()
-local function IFSBZR_fake_script() -- ScriptHub.LocalScript 
+coroutine.wrap(RNMCAV_fake_script)()
+local function YOCXOI_fake_script() -- ScriptHub.LocalScript 
 	local script = Instance.new('LocalScript', ScriptHub)
 
 	local frame = script.Parent.Parent.ScriptHubUI
@@ -349,8 +341,8 @@ local function IFSBZR_fake_script() -- ScriptHub.LocalScript
 		clear.Visible = false
 	end)
 end
-coroutine.wrap(IFSBZR_fake_script)()
-local function ZVMDGLF_fake_script() -- Close.LocalScript 
+coroutine.wrap(YOCXOI_fake_script)()
+local function IATI_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	local frame = script.Parent.Parent
@@ -365,8 +357,8 @@ local function ZVMDGLF_fake_script() -- Close.LocalScript
 		clear.Visible = true
 	end)
 end
-coroutine.wrap(ZVMDGLF_fake_script)()
-local function CIUTB_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(IATI_fake_script)()
+local function KATNO_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local btn = script.Parent
@@ -402,8 +394,8 @@ local function CIUTB_fake_script() -- ImageButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(CIUTB_fake_script)()
-local function OPMN_fake_script() -- Haxx.LocalScript 
+coroutine.wrap(KATNO_fake_script)()
+local function BNMHAQK_fake_script() -- Haxx.LocalScript 
 	local script = Instance.new('LocalScript', Haxx)
 
 	local SGui = script.Parent
@@ -414,4 +406,4 @@ local function OPMN_fake_script() -- Haxx.LocalScript
 		Frame.Visible = not Frame.Visible
 	end)
 end
-coroutine.wrap(OPMN_fake_script)()
+coroutine.wrap(BNMHAQK_fake_script)()
