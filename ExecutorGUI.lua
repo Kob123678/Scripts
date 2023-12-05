@@ -111,7 +111,7 @@ UICorner_6.Parent = ImageButton
 
 -- Scripts:
 
-local function NIHCS_fake_script() -- TextBox.LocalScript 
+local function OCBVU_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local TextBox = script.Parent -- Replace with the actual TextBox
@@ -123,8 +123,8 @@ local function NIHCS_fake_script() -- TextBox.LocalScript
 	end)
 	
 end
-coroutine.wrap(NIHCS_fake_script)()
-local function OMVXFW_fake_script() -- Execute.LocalScript 
+coroutine.wrap(OCBVU_fake_script)()
+local function IYDSYIB_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -133,8 +133,8 @@ local function OMVXFW_fake_script() -- Execute.LocalScript
 		loadstring(textbox.Text)() -- Execute Script From TextBox
 	end)
 end
-coroutine.wrap(OMVXFW_fake_script)()
-local function SHYCKUN_fake_script() -- Clear.LocalScript 
+coroutine.wrap(IYDSYIB_fake_script)()
+local function CZYYO_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	local button = script.Parent
@@ -143,8 +143,8 @@ local function SHYCKUN_fake_script() -- Clear.LocalScript
 		textbox.Text = "" -- Make Textbox Empty
 	end)
 end
-coroutine.wrap(SHYCKUN_fake_script)()
-local function NDZV_fake_script() -- Main.LocalScript 
+coroutine.wrap(CZYYO_fake_script)()
+local function XSZATGW_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	local UIS = game:GetService('UserInputService')
@@ -182,8 +182,45 @@ local function NDZV_fake_script() -- Main.LocalScript
 		end
 	end)
 end
-coroutine.wrap(NDZV_fake_script)()
-local function ZXADDY_fake_script() -- Haxx.LocalScript 
+coroutine.wrap(XSZATGW_fake_script)()
+local function VFNDYNX_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	local btn = script.Parent
+	
+	local isHovering = false
+	
+	
+	btn.MouseEnter:Connect(function()
+		
+		isHovering = true
+		
+		btn:TweenSize(UDim2.new(0, 90, 0, 90), Enum.EasingDirection.InOut, Enum.EasingStyle.Quint, 0.2, true)
+	end)
+	
+	btn.MouseLeave:Connect(function()
+		
+		isHovering = false
+		
+		btn:TweenSize(UDim2.new(0, 82, 0, 82), Enum.EasingDirection.InOut, Enum.EasingStyle.Quint, 0.2, true)
+	end)
+	
+	btn.MouseButton1Down:Connect(function()
+		
+		btn:TweenSize(UDim2.new(0, 73, 0, 73), Enum.EasingDirection.InOut, Enum.EasingStyle.Quint, 0.2, true)
+	end)
+	
+	btn.MouseButton1Up:Connect(function()
+		
+		if not isHovering then
+			btn:TweenSize(UDim2.new(0, 82, 0, 82), Enum.EasingDirection.InOut, Enum.EasingStyle.Quint, 0.2, true)
+		else
+			btn:TweenSize(UDim2.new(0, 90, 0, 90), Enum.EasingDirection.InOut, Enum.EasingStyle.Quint, 0.2, true)
+		end
+	end)
+end
+coroutine.wrap(VFNDYNX_fake_script)()
+local function GTZTHM_fake_script() -- Haxx.LocalScript 
 	local script = Instance.new('LocalScript', Haxx)
 
 	local SGui = script.Parent
@@ -194,4 +231,4 @@ local function ZXADDY_fake_script() -- Haxx.LocalScript
 		Frame.Visible = not Frame.Visible
 	end)
 end
-coroutine.wrap(ZXADDY_fake_script)()
+coroutine.wrap(GTZTHM_fake_script)()
