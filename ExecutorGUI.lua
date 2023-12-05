@@ -24,7 +24,7 @@ Main.Parent = Haxx
 Main.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0.040605586, 0, 0.100930981, 0)
+Main.Position = UDim2.new(0.0966189057, 0, 0.294228673, 0)
 Main.Size = UDim2.new(0, 376, 0, 211)
 
 UICorner.Parent = Main
@@ -98,7 +98,7 @@ UICorner_5.Parent = Clear
 
 -- Scripts:
 
-local function AMSXK_fake_script() -- TextBox.LocalScript 
+local function AZQWIS_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local TextBox = script.Parent -- Replace with the actual TextBox
@@ -110,8 +110,8 @@ local function AMSXK_fake_script() -- TextBox.LocalScript
 	end)
 	
 end
-coroutine.wrap(AMSXK_fake_script)()
-local function RTSG_fake_script() -- Execute.LocalScript 
+coroutine.wrap(AZQWIS_fake_script)()
+local function KNCIJV_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -120,8 +120,8 @@ local function RTSG_fake_script() -- Execute.LocalScript
 		loadstring(textbox.Text)() -- Execute Script From TextBox
 	end)
 end
-coroutine.wrap(RTSG_fake_script)()
-local function TQFBEHK_fake_script() -- Clear.LocalScript 
+coroutine.wrap(KNCIJV_fake_script)()
+local function SCZOK_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	local button = script.Parent
@@ -130,13 +130,43 @@ local function TQFBEHK_fake_script() -- Clear.LocalScript
 		textbox.Text = "" -- Make Textbox Empty
 	end)
 end
-coroutine.wrap(TQFBEHK_fake_script)()
-local function TMOYD_fake_script() -- Main.LocalScript 
+coroutine.wrap(SCZOK_fake_script)()
+local function AOKFFCX_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
-	frame = script.Parent
-	frame.Draggable = true
-	frame.Selectable = true
-	frame.Active = true
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
 end
-coroutine.wrap(TMOYD_fake_script)()
+coroutine.wrap(AOKFFCX_fake_script)()
