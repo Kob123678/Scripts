@@ -1,3 +1,6 @@
+-- Gui to Lua
+-- Version: 3.2
+
 -- Instances:
 
 local Haxx = Instance.new("ScreenGui")
@@ -166,9 +169,6 @@ AdminScript.Font = Enum.Font.SourceSans
 AdminScript.Text = "Inf Yield"
 AdminScript.TextColor3 = Color3.fromRGB(255, 255, 255)
 AdminScript.TextSize = 14.000
-AdminScript.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
 
 UICorner_9.Parent = AdminScript
 
@@ -197,9 +197,6 @@ Brookhaven.Font = Enum.Font.SourceSans
 Brookhaven.Text = "Brookhaven"
 Brookhaven.TextColor3 = Color3.fromRGB(255, 255, 255)
 Brookhaven.TextSize = 14.000
-Brookhaven.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
-end)
 
 UICorner_11.Parent = Brookhaven
 
@@ -214,9 +211,6 @@ BladeBall.Font = Enum.Font.SourceSans
 BladeBall.Text = "Blade Ball"
 BladeBall.TextColor3 = Color3.fromRGB(255, 255, 255)
 BladeBall.TextSize = 14.000
-BladeBall.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/nqxlOfc/Loaders/main/Blade_Ball.lua'))()
-end)
 
 UICorner_12.Parent = BladeBall
 
@@ -231,9 +225,6 @@ PetSim99.Font = Enum.Font.SourceSans
 PetSim99.Text = "Pet Simulator 99"
 PetSim99.TextColor3 = Color3.fromRGB(255, 255, 255)
 PetSim99.TextSize = 14.000
-PetSim99.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua"))()
-end)
 
 UICorner_13.Parent = PetSim99
 
@@ -263,14 +254,15 @@ UICorner_14.Parent = ImageButton
 
 -- Scripts:
 
-local function FCML_fake_script() -- Destory.LocalScript 
+-- Destory.Destoru is disabled.
+local function OJCLY_fake_script() -- Destory.LocalScript 
 	local script = Instance.new('LocalScript', Destory)
 
-	local path = script.Parent.Parent.Parent.Parent
-	path:Destroy()
+	local destory = script.Parent.Destoru
+	destory.Enabled = true
 end
-coroutine.wrap(FCML_fake_script)()
-local function WTPH_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(OJCLY_fake_script)()
+local function DBMEFFD_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local TextBox = script.Parent -- Replace with the actual TextBox
@@ -282,8 +274,8 @@ local function WTPH_fake_script() -- TextBox.LocalScript
 	end)
 	
 end
-coroutine.wrap(WTPH_fake_script)()
-local function HSCBX_fake_script() -- Execute.LocalScript 
+coroutine.wrap(DBMEFFD_fake_script)()
+local function OIIMH_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -292,8 +284,8 @@ local function HSCBX_fake_script() -- Execute.LocalScript
 		loadstring(textbox.Text)() -- Execute Script From TextBox
 	end)
 end
-coroutine.wrap(HSCBX_fake_script)()
-local function SFCWW_fake_script() -- Clear.LocalScript 
+coroutine.wrap(OIIMH_fake_script)()
+local function EMRE_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	local button = script.Parent
@@ -302,8 +294,8 @@ local function SFCWW_fake_script() -- Clear.LocalScript
 		textbox.Text = "" -- Make Textbox Empty
 	end)
 end
-coroutine.wrap(SFCWW_fake_script)()
-local function AHQIU_fake_script() -- Main.LocalScript 
+coroutine.wrap(EMRE_fake_script)()
+local function WUDOP_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	local UIS = game:GetService('UserInputService')
@@ -341,8 +333,8 @@ local function AHQIU_fake_script() -- Main.LocalScript
 		end
 	end)
 end
-coroutine.wrap(AHQIU_fake_script)()
-local function GLYWS_fake_script() -- ScriptHub.LocalScript 
+coroutine.wrap(WUDOP_fake_script)()
+local function IFSBZR_fake_script() -- ScriptHub.LocalScript 
 	local script = Instance.new('LocalScript', ScriptHub)
 
 	local frame = script.Parent.Parent.ScriptHubUI
@@ -357,8 +349,8 @@ local function GLYWS_fake_script() -- ScriptHub.LocalScript
 		clear.Visible = false
 	end)
 end
-coroutine.wrap(GLYWS_fake_script)()
-local function HUWEN_fake_script() -- Close.LocalScript 
+coroutine.wrap(IFSBZR_fake_script)()
+local function ZVMDGLF_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	local frame = script.Parent.Parent
@@ -373,8 +365,8 @@ local function HUWEN_fake_script() -- Close.LocalScript
 		clear.Visible = true
 	end)
 end
-coroutine.wrap(HUWEN_fake_script)()
-local function ONFBJ_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(ZVMDGLF_fake_script)()
+local function CIUTB_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local btn = script.Parent
@@ -410,8 +402,8 @@ local function ONFBJ_fake_script() -- ImageButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ONFBJ_fake_script)()
-local function MYRFT_fake_script() -- Haxx.LocalScript 
+coroutine.wrap(CIUTB_fake_script)()
+local function OPMN_fake_script() -- Haxx.LocalScript 
 	local script = Instance.new('LocalScript', Haxx)
 
 	local SGui = script.Parent
@@ -422,4 +414,4 @@ local function MYRFT_fake_script() -- Haxx.LocalScript
 		Frame.Visible = not Frame.Visible
 	end)
 end
-coroutine.wrap(MYRFT_fake_script)()
+coroutine.wrap(OPMN_fake_script)()
