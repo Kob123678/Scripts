@@ -12,8 +12,23 @@ local Execute = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
 local Clear = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
-local ImageButton = Instance.new("ImageButton")
+local ScriptHub = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
+local ScriptHubUI = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local AdminScript = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local Close = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local Brookhaven = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local BladeBall = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local PetSim99 = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local ImageButton = Instance.new("ImageButton")
+local UICorner_13 = Instance.new("UICorner")
 
 --Properties:
 
@@ -99,6 +114,118 @@ Clear.TextSize = 14.000
 
 UICorner_5.Parent = Clear
 
+ScriptHub.Name = "ScriptHub"
+ScriptHub.Parent = Main
+ScriptHub.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+ScriptHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptHub.BorderSizePixel = 0
+ScriptHub.Position = UDim2.new(0.784574449, 0, 0.843710244, 0)
+ScriptHub.Size = UDim2.new(0, 69, 0, 24)
+ScriptHub.Font = Enum.Font.SourceSans
+ScriptHub.Text = "ScriptHub"
+ScriptHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptHub.TextSize = 14.000
+
+UICorner_6.Parent = ScriptHub
+
+ScriptHubUI.Name = "ScriptHubUI"
+ScriptHubUI.Parent = Main
+ScriptHubUI.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+ScriptHubUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptHubUI.BorderSizePixel = 0
+ScriptHubUI.Position = UDim2.new(-9.93444555e-05, 0, 0.132701427, 0)
+ScriptHubUI.Size = UDim2.new(0, 376, 0, 182)
+ScriptHubUI.Visible = false
+
+UICorner_7.Parent = ScriptHubUI
+
+AdminScript.Name = "AdminScript"
+AdminScript.Parent = ScriptHubUI
+AdminScript.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+AdminScript.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AdminScript.BorderSizePixel = 0
+AdminScript.Position = UDim2.new(0.0265957452, 0, 0.0568500571, 0)
+AdminScript.Size = UDim2.new(0, 111, 0, 35)
+AdminScript.Font = Enum.Font.SourceSans
+AdminScript.Text = "Inf Yield"
+AdminScript.TextColor3 = Color3.fromRGB(255, 255, 255)
+AdminScript.TextSize = 14.000
+AdminScript.MouseButton1Click:Connect(function()
+	print(123)
+end)
+
+UICorner_8.Parent = AdminScript
+
+Close.Name = "Close"
+Close.Parent = ScriptHubUI
+Close.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.784574449, 0, 0.820586324, 0)
+Close.Size = UDim2.new(0, 69, 0, 24)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "Close"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextSize = 14.000
+
+UICorner_9.Parent = Close
+
+Brookhaven.Name = "Brookhaven"
+Brookhaven.Parent = ScriptHubUI
+Brookhaven.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Brookhaven.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Brookhaven.BorderSizePixel = 0
+Brookhaven.Position = UDim2.new(0.356382966, 0, 0.0568500571, 0)
+Brookhaven.Size = UDim2.new(0, 110, 0, 35)
+Brookhaven.Font = Enum.Font.SourceSans
+Brookhaven.Text = "Brookhaven"
+Brookhaven.TextColor3 = Color3.fromRGB(255, 255, 255)
+Brookhaven.TextSize = 14.000
+
+UICorner_10.Parent = Brookhaven
+
+BladeBall.Name = "BladeBall"
+BladeBall.Parent = ScriptHubUI
+BladeBall.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+BladeBall.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BladeBall.BorderSizePixel = 0
+BladeBall.Position = UDim2.new(0.675531924, 0, 0.0568500571, 0)
+BladeBall.Size = UDim2.new(0, 110, 0, 35)
+BladeBall.Font = Enum.Font.SourceSans
+BladeBall.Text = "Blade Ball"
+BladeBall.TextColor3 = Color3.fromRGB(255, 255, 255)
+BladeBall.TextSize = 14.000
+
+UICorner_11.Parent = BladeBall
+
+PetSim99.Name = "PetSim99"
+PetSim99.Parent = ScriptHubUI
+PetSim99.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+PetSim99.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PetSim99.BorderSizePixel = 0
+PetSim99.Position = UDim2.new(0.0265957452, 0, 0.271135777, 0)
+PetSim99.Size = UDim2.new(0, 110, 0, 35)
+PetSim99.Font = Enum.Font.SourceSans
+PetSim99.Text = "Pet Simulator 99"
+PetSim99.TextColor3 = Color3.fromRGB(255, 255, 255)
+PetSim99.TextSize = 14.000
+
+UICorner_12.Parent = PetSim99
+
+TextLabel_2.Parent = ScriptHubUI
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.228684768, 0, 0.543956041, 0)
+TextLabel_2.Size = UDim2.new(0, 216, 0, 28)
+TextLabel_2.Font = Enum.Font.Kalam
+TextLabel_2.Text = "More is comming soon!!"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
 ImageButton.Parent = Haxx
 ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -107,11 +234,11 @@ ImageButton.Position = UDim2.new(0.0523755252, 0, 0.264838934, 0)
 ImageButton.Size = UDim2.new(0, 82, 0, 82)
 ImageButton.Image = "rbxassetid://15550241838"
 
-UICorner_6.Parent = ImageButton
+UICorner_13.Parent = ImageButton
 
 -- Scripts:
 
-local function OCBVU_fake_script() -- TextBox.LocalScript 
+local function FNSPI_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local TextBox = script.Parent -- Replace with the actual TextBox
@@ -123,8 +250,8 @@ local function OCBVU_fake_script() -- TextBox.LocalScript
 	end)
 	
 end
-coroutine.wrap(OCBVU_fake_script)()
-local function IYDSYIB_fake_script() -- Execute.LocalScript 
+coroutine.wrap(FNSPI_fake_script)()
+local function MOVEYF_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -133,8 +260,8 @@ local function IYDSYIB_fake_script() -- Execute.LocalScript
 		loadstring(textbox.Text)() -- Execute Script From TextBox
 	end)
 end
-coroutine.wrap(IYDSYIB_fake_script)()
-local function CZYYO_fake_script() -- Clear.LocalScript 
+coroutine.wrap(MOVEYF_fake_script)()
+local function LRXUPJ_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	local button = script.Parent
@@ -143,8 +270,8 @@ local function CZYYO_fake_script() -- Clear.LocalScript
 		textbox.Text = "" -- Make Textbox Empty
 	end)
 end
-coroutine.wrap(CZYYO_fake_script)()
-local function XSZATGW_fake_script() -- Main.LocalScript 
+coroutine.wrap(LRXUPJ_fake_script)()
+local function SFYFND_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	local UIS = game:GetService('UserInputService')
@@ -182,8 +309,40 @@ local function XSZATGW_fake_script() -- Main.LocalScript
 		end
 	end)
 end
-coroutine.wrap(XSZATGW_fake_script)()
-local function VFNDYNX_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(SFYFND_fake_script)()
+local function CETSVQ_fake_script() -- ScriptHub.LocalScript 
+	local script = Instance.new('LocalScript', ScriptHub)
+
+	local frame = script.Parent.Parent.ScriptHubUI
+	local textbox = script.Parent.Parent.TextBox
+	local execute = script.Parent.Parent.Execute
+	local clear = script.Parent.Parent.Clear
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		frame.Visible = true
+		textbox.Visible = false
+		execute.Visible = false
+		clear.Visible = false
+	end)
+end
+coroutine.wrap(CETSVQ_fake_script)()
+local function OHLQRO_fake_script() -- Close.LocalScript 
+	local script = Instance.new('LocalScript', Close)
+
+	local frame = script.Parent.Parent
+	local textbox = script.Parent.Parent.Parent.TextBox
+	local execute = script.Parent.Parent.Parent.Execute
+	local clear = script.Parent.Parent.Parent.Clear
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		frame.Visible = false
+		textbox.Visible = true
+		execute.Visible = true
+		clear.Visible = true
+	end)
+end
+coroutine.wrap(OHLQRO_fake_script)()
+local function IQPAFQ_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local btn = script.Parent
@@ -219,8 +378,8 @@ local function VFNDYNX_fake_script() -- ImageButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VFNDYNX_fake_script)()
-local function GTZTHM_fake_script() -- Haxx.LocalScript 
+coroutine.wrap(IQPAFQ_fake_script)()
+local function VEER_fake_script() -- Haxx.LocalScript 
 	local script = Instance.new('LocalScript', Haxx)
 
 	local SGui = script.Parent
@@ -231,4 +390,4 @@ local function GTZTHM_fake_script() -- Haxx.LocalScript
 		Frame.Visible = not Frame.Visible
 	end)
 end
-coroutine.wrap(GTZTHM_fake_script)()
+coroutine.wrap(VEER_fake_script)()
