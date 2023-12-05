@@ -103,7 +103,7 @@ ImageButton.Parent = Haxx
 ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageButton.BorderSizePixel = 0
-ImageButton.Position = UDim2.new(0.0278751757, 0, 0.0555177666, 0)
+ImageButton.Position = UDim2.new(0.0523755252, 0, 0.264838934, 0)
 ImageButton.Size = UDim2.new(0, 82, 0, 82)
 ImageButton.Image = "rbxassetid://15550241838"
 
@@ -111,7 +111,7 @@ UICorner_6.Parent = ImageButton
 
 -- Scripts:
 
-local function ACHMGCV_fake_script() -- TextBox.LocalScript 
+local function NIHCS_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local TextBox = script.Parent -- Replace with the actual TextBox
@@ -123,8 +123,8 @@ local function ACHMGCV_fake_script() -- TextBox.LocalScript
 	end)
 	
 end
-coroutine.wrap(ACHMGCV_fake_script)()
-local function BNQJMA_fake_script() -- Execute.LocalScript 
+coroutine.wrap(NIHCS_fake_script)()
+local function OMVXFW_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -133,8 +133,8 @@ local function BNQJMA_fake_script() -- Execute.LocalScript
 		loadstring(textbox.Text)() -- Execute Script From TextBox
 	end)
 end
-coroutine.wrap(BNQJMA_fake_script)()
-local function ETII_fake_script() -- Clear.LocalScript 
+coroutine.wrap(OMVXFW_fake_script)()
+local function SHYCKUN_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	local button = script.Parent
@@ -143,8 +143,8 @@ local function ETII_fake_script() -- Clear.LocalScript
 		textbox.Text = "" -- Make Textbox Empty
 	end)
 end
-coroutine.wrap(ETII_fake_script)()
-local function ECTR_fake_script() -- Main.LocalScript 
+coroutine.wrap(SHYCKUN_fake_script)()
+local function NDZV_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	local UIS = game:GetService('UserInputService')
@@ -182,8 +182,8 @@ local function ECTR_fake_script() -- Main.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ECTR_fake_script)()
-local function VMBKJP_fake_script() -- Haxx.LocalScript 
+coroutine.wrap(NDZV_fake_script)()
+local function ZXADDY_fake_script() -- Haxx.LocalScript 
 	local script = Instance.new('LocalScript', Haxx)
 
 	local SGui = script.Parent
@@ -194,4 +194,4 @@ local function VMBKJP_fake_script() -- Haxx.LocalScript
 		Frame.Visible = not Frame.Visible
 	end)
 end
-coroutine.wrap(VMBKJP_fake_script)()
+coroutine.wrap(ZXADDY_fake_script)()
