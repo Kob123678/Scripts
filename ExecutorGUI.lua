@@ -29,12 +29,12 @@ local Brookhaven = Instance.new("TextButton")
 local UICorner_11 = Instance.new("UICorner")
 local BladeBall = Instance.new("TextButton")
 local UICorner_12 = Instance.new("UICorner")
-local PetSim99 = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
 local TextLabel_2 = Instance.new("TextLabel")
 local Rejoin = Instance.new("TextButton")
-local UICorner_14 = Instance.new("UICorner")
+local UICorner_13 = Instance.new("UICorner")
 local ChatTranslate = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local FridayBloxxin = Instance.new("TextButton")
 local UICorner_15 = Instance.new("UICorner")
 local ImageButton = Instance.new("ImageButton")
 local UICorner_16 = Instance.new("UICorner")
@@ -52,7 +52,6 @@ Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.BorderSizePixel = 0
 Main.Position = UDim2.new(0.385538965, 0, 0.177237004, 0)
 Main.Size = UDim2.new(0, 376, 0, 211)
-Main.Visible = false
 
 UICorner.Parent = Main
 
@@ -90,9 +89,6 @@ Destory.Font = Enum.Font.SourceSans
 Destory.Text = "DestoryScript"
 Destory.TextColor3 = Color3.fromRGB(255, 255, 255)
 Destory.TextSize = 14.000
-Destory.MouseButton1Click:Connect(function()
-	Haxx:Destroy()
-end)
 
 UICorner_3.Parent = Destory
 
@@ -107,6 +103,7 @@ TextBox.Font = Enum.Font.SourceSans
 TextBox.Text = "print(\"Hello World!\")"
 TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
 TextBox.TextYAlignment = Enum.TextYAlignment.Top
 
@@ -201,7 +198,7 @@ Brookhaven.BorderSizePixel = 0
 Brookhaven.Position = UDim2.new(0.356382966, 0, 0.0568500571, 0)
 Brookhaven.Size = UDim2.new(0, 110, 0, 35)
 Brookhaven.Font = Enum.Font.SourceSans
-Brookhaven.Text = "Brookhaven"
+Brookhaven.Text = "Ice Hub"
 Brookhaven.TextColor3 = Color3.fromRGB(255, 255, 255)
 Brookhaven.TextSize = 14.000
 
@@ -215,25 +212,11 @@ BladeBall.BorderSizePixel = 0
 BladeBall.Position = UDim2.new(0.675531924, 0, 0.0568500571, 0)
 BladeBall.Size = UDim2.new(0, 110, 0, 35)
 BladeBall.Font = Enum.Font.SourceSans
-BladeBall.Text = "Blade Ball"
+BladeBall.Text = "Bedol Hub"
 BladeBall.TextColor3 = Color3.fromRGB(255, 255, 255)
 BladeBall.TextSize = 14.000
 
 UICorner_12.Parent = BladeBall
-
-PetSim99.Name = "PetSim99"
-PetSim99.Parent = ScriptHubUI
-PetSim99.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-PetSim99.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PetSim99.BorderSizePixel = 0
-PetSim99.Position = UDim2.new(0.0265957452, 0, 0.271135777, 0)
-PetSim99.Size = UDim2.new(0, 110, 0, 35)
-PetSim99.Font = Enum.Font.SourceSans
-PetSim99.Text = "Pet Simulator 99"
-PetSim99.TextColor3 = Color3.fromRGB(255, 255, 255)
-PetSim99.TextSize = 14.000
-
-UICorner_13.Parent = PetSim99
 
 TextLabel_2.Parent = ScriptHubUI
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -261,7 +244,7 @@ Rejoin.Text = "Rejoin"
 Rejoin.TextColor3 = Color3.fromRGB(255, 255, 255)
 Rejoin.TextSize = 14.000
 
-UICorner_14.Parent = Rejoin
+UICorner_13.Parent = Rejoin
 
 ChatTranslate.Name = "ChatTranslate"
 ChatTranslate.Parent = ScriptHubUI
@@ -275,7 +258,21 @@ ChatTranslate.Text = "Chat Translate"
 ChatTranslate.TextColor3 = Color3.fromRGB(255, 255, 255)
 ChatTranslate.TextSize = 14.000
 
-UICorner_15.Parent = ChatTranslate
+UICorner_14.Parent = ChatTranslate
+
+FridayBloxxin.Name = "FridayBloxxin"
+FridayBloxxin.Parent = ScriptHubUI
+FridayBloxxin.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+FridayBloxxin.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FridayBloxxin.BorderSizePixel = 0
+FridayBloxxin.Position = UDim2.new(0.0265957452, 0, 0.271135777, 0)
+FridayBloxxin.Size = UDim2.new(0, 110, 0, 35)
+FridayBloxxin.Font = Enum.Font.SourceSans
+FridayBloxxin.Text = "Friday Night Bloxxin'"
+FridayBloxxin.TextColor3 = Color3.fromRGB(255, 255, 255)
+FridayBloxxin.TextSize = 14.000
+
+UICorner_15.Parent = FridayBloxxin
 
 ImageButton.Parent = Haxx
 ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -289,20 +286,19 @@ UICorner_16.Parent = ImageButton
 
 -- Scripts:
 
-local function EOQZH_fake_script() -- TextBox.LocalScript 
-	local script = Instance.new('LocalScript', TextBox)
+local function GJXNQR_fake_script() -- Panel.LocalScript 
+	local script = Instance.new('LocalScript', Panel)
 
-	local TextBox = script.Parent -- Replace with the actual TextBox
+	local SGui = script.Parent
+	local Frame = SGui.Parent.Parent.Parent.Haxx
+	local Button = SGui:WaitForChild("Destory")
 	
-	TextBox.Focused:Connect(function(focused)
-		if focused then
-			TextBox.Text = TextBox.Text -- Prevent default behavior of clearing text
-		end
+	Button.MouseButton1Up:Connect(function()
+		Frame:Destroy()
 	end)
-	
 end
-coroutine.wrap(EOQZH_fake_script)()
-local function EGUD_fake_script() -- Execute.LocalScript 
+coroutine.wrap(GJXNQR_fake_script)()
+local function CRBUGK_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -311,8 +307,8 @@ local function EGUD_fake_script() -- Execute.LocalScript
 		loadstring(textbox.Text)() -- Execute Script From TextBox
 	end)
 end
-coroutine.wrap(EGUD_fake_script)()
-local function ZULE_fake_script() -- Clear.LocalScript 
+coroutine.wrap(CRBUGK_fake_script)()
+local function WGOT_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	local button = script.Parent
@@ -321,8 +317,8 @@ local function ZULE_fake_script() -- Clear.LocalScript
 		textbox.Text = "" -- Make Textbox Empty
 	end)
 end
-coroutine.wrap(ZULE_fake_script)()
-local function NARST_fake_script() -- Main.LocalScript 
+coroutine.wrap(WGOT_fake_script)()
+local function NAEIXE_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	local UIS = game:GetService('UserInputService')
@@ -360,8 +356,8 @@ local function NARST_fake_script() -- Main.LocalScript
 		end
 	end)
 end
-coroutine.wrap(NARST_fake_script)()
-local function QNYTYX_fake_script() -- ScriptHub.LocalScript 
+coroutine.wrap(NAEIXE_fake_script)()
+local function OLPX_fake_script() -- ScriptHub.LocalScript 
 	local script = Instance.new('LocalScript', ScriptHub)
 
 	local frame = script.Parent.Parent.ScriptHubUI
@@ -376,16 +372,16 @@ local function QNYTYX_fake_script() -- ScriptHub.LocalScript
 		clear.Visible = false
 	end)
 end
-coroutine.wrap(QNYTYX_fake_script)()
-local function XDNYQ_fake_script() -- AdminScript.LocalScript 
+coroutine.wrap(OLPX_fake_script)()
+local function XRWFW_fake_script() -- AdminScript.LocalScript 
 	local script = Instance.new('LocalScript', AdminScript)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 	end)
 end
-coroutine.wrap(XDNYQ_fake_script)()
-local function EBHFZGB_fake_script() -- Close.LocalScript 
+coroutine.wrap(XRWFW_fake_script)()
+local function GAEBOTI_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	local frame = script.Parent.Parent
@@ -400,32 +396,24 @@ local function EBHFZGB_fake_script() -- Close.LocalScript
 		clear.Visible = true
 	end)
 end
-coroutine.wrap(EBHFZGB_fake_script)()
-local function AVUUETS_fake_script() -- Brookhaven.LocalScript 
+coroutine.wrap(GAEBOTI_fake_script)()
+local function ZVTR_fake_script() -- Brookhaven.LocalScript 
 	local script = Instance.new('LocalScript', Brookhaven)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
 	end)
 end
-coroutine.wrap(AVUUETS_fake_script)()
-local function FHPPOY_fake_script() -- BladeBall.LocalScript 
+coroutine.wrap(ZVTR_fake_script)()
+local function EJOHH_fake_script() -- BladeBall.LocalScript 
 	local script = Instance.new('LocalScript', BladeBall)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/nqxlOfc/Loaders/main/Blade_Ball.lua'))()
 	end)
 end
-coroutine.wrap(FHPPOY_fake_script)()
-local function VOVCW_fake_script() -- PetSim99.LocalScript 
-	local script = Instance.new('LocalScript', PetSim99)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua"))()
-	end)
-end
-coroutine.wrap(VOVCW_fake_script)()
-local function KLFFXO_fake_script() -- Rejoin.LocalScript 
+coroutine.wrap(EJOHH_fake_script)()
+local function CTWUGKE_fake_script() -- Rejoin.LocalScript 
 	local script = Instance.new('LocalScript', Rejoin)
 
 	-- Local Stuff
@@ -440,16 +428,24 @@ local function KLFFXO_fake_script() -- Rejoin.LocalScript
 		loadstring(game:HttpGet("https://pastebin.com/raw/6wdd37J7"))()
 	end)
 end
-coroutine.wrap(KLFFXO_fake_script)()
-local function SNPIL_fake_script() -- ChatTranslate.LocalScript 
+coroutine.wrap(CTWUGKE_fake_script)()
+local function ZVUE_fake_script() -- ChatTranslate.LocalScript 
 	local script = Instance.new('LocalScript', ChatTranslate)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGetAsync('https://i.qts.life/r/ChatInlineTranslator.lua', true))()
 	end)
 end
-coroutine.wrap(SNPIL_fake_script)()
-local function VGRCQK_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(ZVUE_fake_script)()
+local function LRPV_fake_script() -- FridayBloxxin.LocalScript 
+	local script = Instance.new('LocalScript', FridayBloxxin)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet(("https://stavratum.github.io/%d/"):format(game.PlaceId)))()
+	end)
+end
+coroutine.wrap(LRPV_fake_script)()
+local function VVAPROR_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local btn = script.Parent
@@ -485,8 +481,8 @@ local function VGRCQK_fake_script() -- ImageButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VGRCQK_fake_script)()
-local function BSNF_fake_script() -- Haxx.LocalScript 
+coroutine.wrap(VVAPROR_fake_script)()
+local function KASQWWY_fake_script() -- Haxx.LocalScript 
 	local script = Instance.new('LocalScript', Haxx)
 
 	local SGui = script.Parent
@@ -497,4 +493,4 @@ local function BSNF_fake_script() -- Haxx.LocalScript
 		Frame.Visible = not Frame.Visible
 	end)
 end
-coroutine.wrap(BSNF_fake_script)()
+coroutine.wrap(KASQWWY_fake_script)()
