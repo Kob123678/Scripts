@@ -1,4 +1,4 @@
-script_key = "key"
+script_key = key
 getgenv().Team = "Marines"
 getgenv().FixCrash = false -- Turn it On For Hopping Server, Improve Performance But Silent Aim On Mob And Player
 getgenv().FixCrash2 = false -- Turn it On For Hopping Server, Improve Performance But Will Remove Speed Changer
