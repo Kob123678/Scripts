@@ -35,7 +35,7 @@ while true do
     
     -- Teleport player to each stage and claim river results
     for i = 1, 10 do
-        teleportAndClaim(workspace.BoatStages.NormalStages["CaveStage" .. i].DarknessPart.Position, i)
+        teleportAndClaim(workspace.BoatStages.NormalStages["CaveStage" .. i].DarknessPart.Position)
     end
     
     -- Reset Character
