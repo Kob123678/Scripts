@@ -11,6 +11,7 @@ local function notify(message)
 end
 
 -- Anti-Afk
+notify("Anti-Afk is Enabled.")
 local virtualUser = game:service('VirtualUser')
 game:service('Players').LocalPlayer.Idled:connect(function()
     virtualUser:CaptureController()
