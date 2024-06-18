@@ -1,3 +1,5 @@
+-- Work on auto exec
+
 local GuiService = game:GetService("GuiService")
 
 GuiService.ErrorMessageChanged:Connect(function()
