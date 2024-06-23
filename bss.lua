@@ -1,30 +1,36 @@
--- Andel Hub
 repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
-local p = game.Players.LocalPlayer
-local id = 1537690962
 
-if game.PlaceId ~= id then
-    game.StarterGui:SetCore("SendNotification", {
-        Title = "Join Bee Swarm Simulator?",
-        Text = "Would you like to join Bee Swarm Simulator?",
-        Duration = 10,
-        Button1 = "Yes",
-        Button2 = "No",
-        Callback = function(c)
-            if c == "Yes" then
-                game:GetService("TeleportService"):Teleport(id, p)
-            end
-        end
-    })
+local function promptTeleport()
+    local p = game.Players.LocalPlayer
+    local ui = Instance.new("ScreenGui", p:WaitForChild("PlayerGui"))
+    local frame = Instance.new("Frame", ui)
+    frame.Size, frame.Position, frame.BackgroundTransparency = UDim2.new(0.3, 0, 0.2, 0), UDim2.new(0.35, 0, 0.4, 0), 0.5
+
+    local label = Instance.new("TextLabel", frame)
+    label.Text, label.Size, label.Position, label.TextScaled, label.BackgroundTransparency = "Do you want to join Bee Swarm Simulator?", UDim2.new(1, 0, 0.5, 0), UDim2.new(0, 0, 0, 0), true, 1
+
+    local yesButton, noButton = Instance.new("TextButton", frame), Instance.new("TextButton", frame)
+    yesButton.Text, yesButton.Size, yesButton.Position, yesButton.TextScaled = "Yes", UDim2.new(0.4, 0, 0.3, 0), UDim2.new(0.1, 0, 0.6, 0), true
+    noButton.Text, noButton.Size, noButton.Position, noButton.TextScaled = "No", UDim2.new(0.4, 0, 0.3, 0), UDim2.new(0.5, 0, 0.6, 0), true
+
+    yesButton.MouseButton1Click:Connect(function() game:GetService("TeleportService"):Teleport(1537690962, p) end)
+    noButton.MouseButton1Click:Connect(function() ui:Destroy() end)
+end
+
+if game.PlaceId ~= 1537690962 then
+    promptTeleport()
 else
     game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Anti-Afk+Auto Rejoin Enabled!", Duration = 5})
     workspace.RetroEvent.RetroChallengePortal.Trigger:Destroy()
+    
     local vu = game:service('VirtualUser')
-    p.Idled:connect(function() vu:CaptureController() vu:ClickButton2(Vector2.new()) end)
+    game.Players.LocalPlayer.Idled:connect(function() vu:CaptureController() vu:ClickButton2(Vector2.new()) end)
+    
     game.GuiService.ErrorMessageChanged:Connect(function()
         wait(0.1)
         syn.queue_on_teleport([[game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)]])
-        game:GetService("TeleportService"):Teleport(game.PlaceId, p)
+        game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
     end)
+    
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AdelOnTheTop/Adel-Hub/main/BeeSwarmSimulator.lua"))()
 end
