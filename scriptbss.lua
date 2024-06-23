@@ -2,7 +2,6 @@ _G.Autojoin = _G.Autojoin or false
 _G.AntiAfk = _G.AntiAfk or true
 _G.AutoRemovePortal = _G.AutoRemovePortal or true
 _G.AutoRejoin = _G.AutoRejoin or true
-_G.AutoExecute = _G.AutoExecute or false
 
 repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
 
@@ -50,14 +49,4 @@ else
     end
 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AdelOnTheTop/Adel-Hub/main/BeeSwarmSimulator.lua"))()
-end
-
-if _G.AutoExecute then
-    game:GetService("TeleportService").TeleportInitFailed:Connect(function(player, teleportResult)
-        if teleportResult == Enum.TeleportResult.Failure then
-            wait(0.1)
-            syn.queue_on_teleport([[loadstring(game:HttpGet("https://raw.githubusercontent.com/Kob123678/Scripts/main/scriptbss.lua"))()]])
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Kob123678/Scripts/main/scriptbss.lua"))()
-        end
-    end)
 end
