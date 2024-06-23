@@ -29,7 +29,6 @@ if game.PlaceId ~= 1537690962 then
         promptTeleport()
     end
 else
-    game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Anti-Afk+Auto Rejoin Enabled!", Duration = 5})
     
     if _G.AutoRemovePortal then
         workspace.RetroEvent.RetroChallengePortal.Trigger:Destroy()
