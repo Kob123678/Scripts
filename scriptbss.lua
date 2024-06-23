@@ -25,16 +25,23 @@ if game.PlaceId ~= 1537690962 then
     end
 else
     game.StarterGui:SetCore("SendNotification", {Title = "Notification", Text = "Anti-Afk+Auto Rejoin Enabled!", Duration = 5})
-    workspace.RetroEvent.RetroChallengePortal.Trigger:Destroy()
     
-    local vu = game:service('VirtualUser')
-    game.Players.LocalPlayer.Idled:connect(function() vu:CaptureController() vu:ClickButton2(Vector2.new()) end)
+    if _G.AutoRemovePortal then
+        workspace.RetroEvent.RetroChallengePortal.Trigger:Destroy()
+    end
     
-    game.GuiService.ErrorMessageChanged:Connect(function()
-        wait(0.1)
-        syn.queue_on_teleport([[game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)]])
-        game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
-    end)
+    if _G.AntiAfk then
+        local vu = game:service('VirtualUser')
+        game.Players.LocalPlayer.Idled:connect(function() vu:CaptureController() vu:ClickButton2(Vector2.new()) end)
+    end
     
+    if _G.AutoRejoin then
+        game.GuiService.ErrorMessageChanged:Connect(function()
+            wait(0.1)
+            syn.queue_on_teleport([[game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)]])
+            game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+        end)
+    end
+
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AdelOnTheTop/Adel-Hub/main/BeeSwarmSimulator.lua"))()
 end
