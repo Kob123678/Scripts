@@ -1,6 +1,6 @@
 repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/ttwizz/Roblox/master/Orion.lua"))()
-local Window = OrionLib:MakeWindow({Name = "Admin RNG", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Admin RNG"})
 local Main = Window:MakeTab({Name = "Main", Icon = "rbxassetid://4483345998"})
 local Credit = Window:MakeTab({Name = "Credit", Icon = "rbxassetid://4483345998"})
 Credit:AddLabel("Made By SecondKob")
