@@ -1,6 +1,9 @@
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/ttwizz/Roblox/master/Orion.lua"))()
-local Window = OrionLib:MakeWindow({Name = "Admin RNG"})
+local Window = OrionLib:MakeWindow({Name = "Admin RNG", SaveConfig = true, ConfigFolder = "OrionTest"})
 local Main = Window:MakeTab({Name = "Main", Icon = "rbxassetid://4483345998"})
+local Credit = Window:MakeTab({Name = "Credit", Icon = "rbxassetid://4483345998"})
+Credit:AddLabel("Made By SecondKob")
+
 local autoRollEnabled, antiAfkEnabled, autoRejoinEnabled = _G.AutoRoll or false, _G.AntiAfk or false, _G.AutoRejoin or false
 
 Main:AddToggle({Name = "Auto Roll", Default = autoRollEnabled, Callback = function(Value) _G.AutoRoll, autoRollEnabled = Value, Value end})
