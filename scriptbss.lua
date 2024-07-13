@@ -1,7 +1,7 @@
 _G.Autojoin = _G.Autojoin or false
 _G.AntiAfk = _G.AntiAfk or true
 _G.AutoRemovePortal = _G.AutoRemovePortal or true
-_G.AutoRejoin = _G.AutoRejoin or true
+_G.AutoRejoin = _G.AutoRejoin or false
 
 repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
 
