@@ -1,47 +1,86 @@
--- From Tomato Hub
+-- By Tomato Hub
+
 repeat wait() until game:IsLoaded()
+-- Options
+getgenv().autofarm = true
+getgenv().Debug = true
 
-getgenv().autofarm, getgenv().Debug = true, true
-
-local lastdebug, LP, wait = tick(), game:GetService("Players").LocalPlayer, task.wait
-local gameModes, winsGained = {"Easy", "Medium", "Hard"}, 0
-
-local function debugprint(...) 
-    if Debug then warn(..., tick() - lastdebug) end
+-- Debug Print
+local lastdebug = tick()
+local function debugprint(...)
+    if Debug == true then
+        warn(..., tick() - lastdebug)
+    end
     lastdebug = tick()
+    wait()
 end
 debugprint('Game Loaded')
 
+local gameModes = {"Easy", "Medium", "Hard"}
+local winsGained = 0
+
+-- Constants
+local LP = game:GetService("Players").LocalPlayer
+local RunService = game:GetService("RunService")
+local wait = task.wait
+
+-- Functions
 local function getThing(mode, thing)
     local mode = workspace[mode]
-    if thing == "entry" then return mode.Entry.LiftEntry end
-    if thing == "info" then return mode.Info end
-    return mode:WaitForChild('Main'):WaitForChild('Exit')
+    local thing = thing:lower()
+    if thing == "entry" then
+        return mode.Entry.LiftEntry
+    elseif thing == "info" then
+        return mode.Info
+    elseif thing == "exit" then
+        return mode:WaitForChild('Main'):WaitForChild('Exit')
+    end
+end
+
+local function getRoot()
+    return (LP.Character or LP.CharacterAdded:Wait()) and LP.Character:WaitForChild("HumanoidRootPart")
 end
 
 local function touchPart(part)
-    local root = LP.Character and LP.Character:WaitForChild("HumanoidRootPart") or LP.CharacterAdded:Wait():WaitForChild("HumanoidRootPart")
+    local root = getRoot()
     firetouchinterest(root, part, 0)
     firetouchinterest(root, part, 1)
 end
 
 local function playGame(mode)
+    -- Enters Lift
     debugprint('Entering Lift..')
     touchPart(getThing(mode, 'entry'))
-    repeat wait() until getThing(mode, 'info').Value == "Game is Ready!"
-    for i = 1, 3 do getThing(mode, 'info').Changed:Wait() end
+    debugprint('Entered Lift')
+    -- Wait until game is ready
+    debugprint('Waiting for "Game is Ready!"')
+    repeat
+        wait()
+    until getThing(mode, 'info').Value == "Game is Ready!"
+    debugprint('"Game is Ready!" detected.')
+    debugprint('Info Changed Checks Started..')
+    for i = 1,3 do
+        debugprint('Info Changed #', i)
+        getThing(mode, 'info').Changed:wait()
+    end
     debugprint('Touching Exit..')
-    repeat wait() touchPart(getThing(mode, 'exit')) until LP.Ingame.Value == 0
+    -- Spam touch exit until win
+    repeat
+        wait()
+        touchPart(getThing(mode, 'exit'))
+    until LP.Ingame.Value == 0
     winsGained += 1
+    debugprint('Game Won.')
 end
 
 while wait() do
     if autofarm and LP.Ingame.Value == 0 and LP.Waiting.Value == 0 then
         for _, mode in ipairs(gameModes) do
-            if getThing(mode, 'info').Value:lower():match('game is ready!|intermission') then
+            local infoval = getThing(mode, 'info').Value
+            if infoval == "Game is Ready!" or infoval:lower():match('intermission') then
                 playGame(mode)
                 print("Gained", winsGained, "wins so far!")
-                break
+                continue
             end
         end
     end
