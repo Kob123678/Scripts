@@ -1,5 +1,7 @@
--- By Tomato Hub
 repeat wait() until game:IsLoaded()
+-- Options
+getgenv().autofarm = true
+getgenv().Debug = true
 
 -- Debug Print
 local lastdebug = tick()
